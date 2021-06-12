@@ -26,7 +26,8 @@ public class Pnl2_view extends LinearLayout implements Observer
 
     public ImageView imageProgrammer;
 
-    public TextView textProgramming;
+    public TextView textHome;
+    public TextView textMessage;
     public TextView textProductivite;
     public TextView textEnergie;
 
@@ -46,7 +47,8 @@ public class Pnl2_view extends LinearLayout implements Observer
 
         imageProgrammer = findViewById(R.id.imageProgrammer);
 
-        textProgramming = findViewById(R.id.textProgramming);
+        textHome = findViewById(R.id.textHome);
+        textMessage = findViewById(R.id.textMessage);
         textProductivite = findViewById(R.id.textProductivite);
         textEnergie = findViewById(R.id.textEnergie);
     }
@@ -61,22 +63,11 @@ public class Pnl2_view extends LinearLayout implements Observer
     }
 
     @Override
-    public void update(Observable observable, Object o) {
-        txtEntier.setText(Integer.toString(refMdl.getNbVaccins()));
-
-        if (refMdl.nbVaccinsMax()) {
-            btnPlus.setEnabled(true);
-        }
-        else {
-            btnPlus.setEnabled(false);
-        }
-        if (refMdl.nbVaccinsMin()) {
-            btnMoins.setEnabled(true);
-            btnRaz.setEnabled(true);
-        }
-        else {
-            btnMoins.setEnabled(false);
-            btnRaz.setEnabled(false);
-        }
+    public void update(Observable observable, Object o)
+    {
+        textMessage.setText(refMdl.getMessage());
+        textEnergie.setText(Integer.toString(refMdl.getEnergiePoints()));
+        textProductivite.setText(Integer.toString(refMdl.getProductivitePoints()));
+        imageProgrammer.setImageBitmap(refMdl.getImage());
     }
 }
