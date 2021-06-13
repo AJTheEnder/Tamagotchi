@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tamagotchijava.R;
-import com.example.tamagotchijava.mvc2.Pnl2_controller;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -44,13 +43,12 @@ public class Pnl3_view extends LinearLayout implements Observer
 
         //Liaison des boutons à ceux de l'xml
         btnReboot = findViewById(R.id.btnReboot);
-        btnGoToPnl1 = findViewById(R.id.btnGoToPnl1);
-        btnGoToPnl2 = findViewById(R.id.btnGoToPnl2);
+        btnGoToPnl1 = findViewById(R.id.pnl3_btnGoToPnl1);
+        btnGoToPnl2 = findViewById(R.id.pnl3_btnGoToPnl2);
 
         //Liaison des différents éléments à ceux de l'xml
         image = findViewById(R.id.imageOption);
 
-        textHome = findViewById(R.id.textHome);
         textProgrammerName = findViewById(R.id.textTamagotchiName);
         textYourName = findViewById(R.id.textYourName);
     }

@@ -34,8 +34,8 @@ public class Pnl1_view extends LinearLayout
         inflater.inflate(R.layout.layout_pnl1, this);
 
         //Liaisons des boutons à ceux de l'xml
-        btnGotoPnl2 = (Button)findViewById(R.id.btnGotoPnl2);
-        btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
+        btnGotoPnl2 = (Button)findViewById(R.id.pnl1_btnGotoPnl2);
+        btnGotoPnl3 = (Button)findViewById(R.id.pnl1_btnGotoPnl3);
     }
 
     public void setRefCtrl(Pnl1_controller c) {

@@ -4,7 +4,6 @@ import android.view.View;
 
 import com.example.tamagotchijava.Pnl_manager;
 import com.example.tamagotchijava.R;
-import com.example.tamagotchijava.mvc2.Pnl2_model;
 
 public class Pnl3_controller implements View.OnClickListener
 {
@@ -20,7 +19,7 @@ public class Pnl3_controller implements View.OnClickListener
         {
             refPnlManager.setPnl(1);
         }
-        if(v.getId() == R.id.btnGotoPnl2)
+        if(v.getId() == R.id.pnl1_btnGotoPnl2)
         {
             refPnlManager.setPnl(2);
         }

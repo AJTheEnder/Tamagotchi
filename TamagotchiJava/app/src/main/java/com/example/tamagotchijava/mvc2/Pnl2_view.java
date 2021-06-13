@@ -50,8 +50,8 @@ public class Pnl2_view extends LinearLayout implements Observer
         btnPause = findViewById(R.id.btnPause);
         btnEnergiser = findViewById(R.id.btnEnergiser);
 
-        btnGoToPnl1 = findViewById(R.id.btnGoToPnl1);
-        btnGoToPnl3 = findViewById(R.id.btnGoToPnl2);
+        btnGoToPnl1 = findViewById(R.id.pnl2_btnGoToPnl1);
+        btnGoToPnl3 = findViewById(R.id.pnl2_btnGoToPnl3);
 
         //Liaison des différents éléments à ceux de l'xml
         imageProgrammer = findViewById(R.id.imageProgrammer);
