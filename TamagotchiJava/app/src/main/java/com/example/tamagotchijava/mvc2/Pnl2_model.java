@@ -52,15 +52,15 @@ public class Pnl2_model extends Observable
             //Changement du message
             message = "Le caféine est une amie précieuse : il reçoit un café";
         }
-
+        //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
         Thread.sleep(30000);
         whatIsProgrammerState();
     }
 
-    public void Pause()
-    {
+    public void Pause() throws InterruptedException {
+        //Ajoute 10 à l'énergie
         if(EnergiePoints <= 90)
         {
             EnergiePoints += 10;
@@ -68,6 +68,7 @@ public class Pnl2_model extends Observable
         else {
             EnergiePoints = 100;
         }
+        //Enlève 10 à la productivité
         if(ProductivitePoints >= 10)
         {
             EnergiePoints -= 10;
@@ -75,15 +76,16 @@ public class Pnl2_model extends Observable
         else {
             ProductivitePoints = 0;
         }
+        //Changement du message
         message = "Une pause ça fait toujours du bien mais l'employeur ne va pas être content";
+        //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
         Thread.sleep(30000);
         whatIsProgrammerState();
     }
 
-    public void Menace()
-    {
+    public void Menace() throws InterruptedException {
         if(ProductivitePoints <= 88)
         {
             EnergiePoints += 12;
@@ -98,7 +100,9 @@ public class Pnl2_model extends Observable
         else {
             EnergiePoints = 0;
         }
+        //Changement du message
         message = "L'employeur lance des menaces AU BOULOT !";
+        //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
         Thread.sleep(30000);
@@ -132,10 +136,12 @@ public class Pnl2_model extends Observable
             message = "A LA PORTE";
             image = ;
         }
+        //Notifier les observers
         setChanged();
         notifyObservers();
     }
 
+    //Les accesseurs aux données
     public int getEnergiePoints()
     {
         return EnergiePoints;
