@@ -5,26 +5,31 @@ import android.media.Image;
 
 import java.util.Observable;
 import java.util.Random;
+import java.io.*;
 
 public class Pnl2_model extends Observable
 {
+    //Les données des différents points, du message (et de l'image ?)
     private int ProductivitePoints;
     private int EnergiePoints;
     private String message;
     private Bitmap image;
+    //Un donnée random pour le choix de l'élément energisant
     private Random rand = new Random();
 
     public Pnl2_model() {
+        //Valeurs de base
         ProductivitePoints = 100;
         EnergiePoints = 100;
         message = "Productif et energique : un bon esclave !";
         image = ;
     }
 
-    public void Energiser()
-    {
+    public void Energiser() throws InterruptedException {
+        //Soit monster pour energiser
         if(rand.nextBoolean() == true)
         {
+            //Augmentation de l'énergie de 6
             if(EnergiePoints <= 94)
             {
                 EnergiePoints += 6;
@@ -32,8 +37,10 @@ public class Pnl2_model extends Observable
             else {
                 EnergiePoints = 100;
             }
+            //Changement du message
             message = "Ce jeu est sponsorisé par Monster : il reçoit une Monster";
         }
+        //Soit café pour energiser
         else {
             if(EnergiePoints <= 96)
             {
@@ -42,11 +49,14 @@ public class Pnl2_model extends Observable
             else {
                 EnergiePoints = 100;
             }
+            //Changement du message
             message = "Le caféine est une amie précieuse : il reçoit un café";
         }
-        whatIsProgrammerState();
+
         setChanged();
         notifyObservers();
+        Thread.sleep(30000);
+        whatIsProgrammerState();
     }
 
     public void Pause()
@@ -66,9 +76,10 @@ public class Pnl2_model extends Observable
             ProductivitePoints = 0;
         }
         message = "Une pause ça fait toujours du bien mais l'employeur ne va pas être content";
-        whatIsProgrammerState();
         setChanged();
         notifyObservers();
+        Thread.sleep(30000);
+        whatIsProgrammerState();
     }
 
     public void Menace()
@@ -88,9 +99,10 @@ public class Pnl2_model extends Observable
             EnergiePoints = 0;
         }
         message = "L'employeur lance des menaces AU BOULOT !";
-        whatIsProgrammerState();
         setChanged();
         notifyObservers();
+        Thread.sleep(30000);
+        whatIsProgrammerState();
     }
 
     public void whatIsProgrammerState()

@@ -18,16 +18,22 @@ public class Pnl2_view extends LinearLayout implements Observer
     public Pnl2_controller refCtrl;
     public Pnl2_model refMdl;
 
+    //Les boutons d'actions sur le programmeur menacer, faire une pause et energiser
     public Button btnMenacer;
     public Button btnPause;
     public Button btnEnergiser;
+    //Les boutons pour aller aux écrans 1 et 3
     public Button btnGoToPnl1;
     public Button btnGoToPnl3;
 
+    //Image du programmeur (change en fonction de son état ?)
     public ImageView imageProgrammer;
 
+    //Texte du menu
     public TextView textHome;
+    //Texte du message, change en fonction de l'état et des actions effectuées
     public TextView textMessage;
+    //Texte d'affichage du nombre de points de productivité et d'energie
     public TextView textProductivite;
     public TextView textEnergie;
 
@@ -36,8 +42,10 @@ public class Pnl2_view extends LinearLayout implements Observer
         super(context);
 
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
+        //Liaison à l'xml de l'écran 2 : layout_pnl2
         inflater.inflate(R.layout.layout_pnl2, this);
 
+        //Liaison des boutons à ceux de l'xml
         btnMenacer = findViewById(R.id.btnMenacer);
         btnPause = findViewById(R.id.btnPause);
         btnEnergiser = findViewById(R.id.btnEnergiser);
@@ -45,6 +53,7 @@ public class Pnl2_view extends LinearLayout implements Observer
         btnGoToPnl1 = findViewById(R.id.btnGoToPnl1);
         btnGoToPnl3 = findViewById(R.id.btnGoToPnl2);
 
+        //Liaison des différents éléments à ceux de l'xml
         imageProgrammer = findViewById(R.id.imageProgrammer);
 
         textHome = findViewById(R.id.textHome);
@@ -53,7 +62,8 @@ public class Pnl2_view extends LinearLayout implements Observer
         textEnergie = findViewById(R.id.textEnergie);
     }
 
-    public void setRefCtrl(Pnl2_controller c) {
+    public void setRefCtrl(Pnl2_controller c)
+    {
         refCtrl= c;
         btnMenacer.setOnClickListener(refCtrl);
         btnPause.setOnClickListener(refCtrl);
@@ -65,6 +75,7 @@ public class Pnl2_view extends LinearLayout implements Observer
     @Override
     public void update(Observable observable, Object o)
     {
+        //Update de l'affichage du message, des points (et de l'image ?) quand le modèle est modifié
         textMessage.setText(refMdl.getMessage());
         textEnergie.setText(Integer.toString(refMdl.getEnergiePoints()));
         textProductivite.setText(Integer.toString(refMdl.getProductivitePoints()));

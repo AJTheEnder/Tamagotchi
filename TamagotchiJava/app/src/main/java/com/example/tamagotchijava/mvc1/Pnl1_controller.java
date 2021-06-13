@@ -7,11 +7,13 @@ import com.example.tamagotchijava.R;
 
 public class Pnl1_controller implements View.OnClickListener
 {
+    //Référence au panel manager pour pouvoir appeller le changement d'écran
     public Pnl_manager refPnlManager;
 
     @Override
     public void onClick(View v)
     {
+        //Quand les boutons sont pressés changer d'écran
         if(v.getId() == R.id.btnGotoPnl2)
         {
             refPnlManager.setPnl(2);
