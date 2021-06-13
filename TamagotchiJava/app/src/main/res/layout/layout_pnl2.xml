@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="SHEEEESH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageProgrammer"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_marginTop="51dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHome"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textProductivite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Prod"
+        app:layout_constraintEnd_toStartOf="@+id/textEnergie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProgrammer" />
+
+    <TextView
+        android:id="@+id/textEnergie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="72dp"
+        android:text="POOOWERR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textProductivite"
+        app:layout_constraintTop_toBottomOf="@+id/imageProgrammer" />
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:text="MSG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProgrammer" />
+
+    <Button
+        android:id="@+id/btnMenacer"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="88dp"
+        android:text="Menacer"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToPnl1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="88dp"
+        android:text="Pause"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToPnl1"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnergiser"
+        app:layout_constraintStart_toEndOf="@+id/btnMenacer" />
+
+    <Button
+        android:id="@+id/btnEnergiser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:text="Énegiser"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToPnl2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPause" />
+
+    <Button
+        android:id="@+id/btnGoToPnl1"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="30dp"
+        android:text="Page 1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoToPnl2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGoToPnl2"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="30dp"
+        android:text="Page 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoToPnl1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
