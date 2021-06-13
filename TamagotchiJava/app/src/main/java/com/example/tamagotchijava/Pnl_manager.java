@@ -15,10 +15,13 @@ import com.example.tamagotchijava.mvc3.Pnl3_view;
 
 public class Pnl_manager
 {
+    //Singleton
     private static Pnl_manager instance = null;
 
+    //Entier symbolisant la view devant être affiché
     private int pnl;
 
+    //Création de chaque éléments des mvc
     private Pnl1_controller ctrl1;
     private Pnl1_view view1;
     private Pnl1_model mdl1;
@@ -33,8 +36,10 @@ public class Pnl_manager
 
     private Pnl_manager(Context context)
     {
+        //Layout de base
         pnl = -1;
 
+        //Instanciation de tous les éléments
         ctrl1 = new Pnl1_controller();
         view1 = new Pnl1_view(context);
         mdl1 = new Pnl1_model();
@@ -62,16 +67,19 @@ public class Pnl_manager
 
     public void setPnl(int p)
     {
+        //Affichage de l'écran 1
         if (p == 1 && pnl != 1)
         {
             refAct.setContentView(view1);
             pnl= 1;
         }
+        //Affichage de l'écran 2
         if (p == 2 && pnl != 2)
         {
             refAct.setContentView(view2);
             pnl= 2;
         }
+        //Affichage de l'écran 3
         if (p == 3 && pnl != 3)
         {
             refAct.setContentView(view3);
