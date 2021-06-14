@@ -165,7 +165,7 @@ public class Pnl2_model extends Observable
         @Override
         public void run()
         {
-            if(ProductivitePoints != 0 && EnergiePoints != 0)
+            if(ProductivitePoints != 0 || EnergiePoints != 0)
             {
                 if(ProductivitePoints > 0)
                 {
