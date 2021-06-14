@@ -10,8 +10,8 @@ public class Pnl3_model extends Observable
 
     //Constructor
     public Pnl3_model() {
-        programmerName = "Random";
-        creatorName = "God";
+        programmerName = " ";
+        creatorName = " ";
 
         setChanged();
         notifyObservers();
@@ -20,8 +20,8 @@ public class Pnl3_model extends Observable
     public void Reboot()
     {
         //Réinitiallisé les données
-        programmerName = "Random";
-        creatorName = "God";
+        programmerName = " ";
+        creatorName = " ";
         //Notifier les observers
         setChanged();
         notifyObservers();

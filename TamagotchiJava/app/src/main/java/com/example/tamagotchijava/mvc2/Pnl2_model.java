@@ -14,6 +14,7 @@ public class Pnl2_model extends Observable
     private int ProductivitePoints;
     private int EnergiePoints;
     private String message;
+    private int state;
     //private Bitmap image;
     //Un donnée random pour le choix de l'élément energisant
     private Random rand = new Random();
@@ -27,6 +28,7 @@ public class Pnl2_model extends Observable
         ProductivitePoints = 100;
         EnergiePoints = 100;
         message = "Productif et energique : un bon esclave !";
+        state = 0;
         //image = ;
 
         setChanged();
@@ -126,26 +128,31 @@ public class Pnl2_model extends Observable
         if(ProductivitePoints >= 100 && EnergiePoints >= 100)
         {
             message = "Productif et energique : un bon esclave !";
+            state = 0;
             //image = ;
         }
         if(ProductivitePoints < 50 && EnergiePoints >= 100)
         {
             message = "La sous productivité est dangereux";
+            state = 1;
             //image = ;
         }
         if(ProductivitePoints >= 100 && EnergiePoints < 50)
         {
             message = "Manque d'énergie quel dommage";
+            state = 2;
             //image = ;
         }
         if(ProductivitePoints < 50 && EnergiePoints < 50)
         {
             message = "Attention le licenciement est proche";
+            state = 3;
             //image = ;
         }
         if(ProductivitePoints == 0 && EnergiePoints == 0)
         {
             message = "A LA PORTE";
+            state = 4;
             //image = ;
         }
         //Notifier les observers
@@ -191,6 +198,10 @@ public class Pnl2_model extends Observable
     public String getMessage()
     {
         return message;
+    }
+
+    public int getState() {
+        return state;
     }
 
     //public Bitmap getImage()

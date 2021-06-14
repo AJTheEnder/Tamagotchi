@@ -79,6 +79,28 @@ public class Pnl2_view extends LinearLayout implements Observer
         textMessage.setText(refMdl.getMessage());
         textEnergie.setText(Integer.toString(refMdl.getEnergiePoints()));
         textProductivite.setText(Integer.toString(refMdl.getProductivitePoints()));
+
+        switch(refMdl.getState())
+        {
+            case 0:
+                imageProgrammer.setImageResource(R.drawable.coder_pgeg);
+                break;
+            case 1:
+                imageProgrammer.setImageResource(R.drawable.coder_pbeg);
+                break;
+            case 2:
+                imageProgrammer.setImageResource(R.drawable.coder_pgeb);
+                break;
+            case 3:
+                imageProgrammer.setImageResource(R.drawable.coder_pbeb);
+                break;
+            case 4:
+                imageProgrammer.setImageResource(R.drawable.coder_pnen);
+                btnMenacer.setEnabled(false);
+                btnEnergiser.setEnabled(false);
+                btnPause.setEnabled(false);
+                break;
+        }
         //imageProgrammer.setImageBitmap(refMdl.getImage());
     }
 }
