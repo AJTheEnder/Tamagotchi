@@ -12,6 +12,9 @@ public class Pnl3_model extends Observable
     public Pnl3_model() {
         programmerName = "Random";
         creatorName = "God";
+
+        setChanged();
+        notifyObservers();
     }
 
     public void Reboot()
@@ -20,6 +23,20 @@ public class Pnl3_model extends Observable
         programmerName = "Random";
         creatorName = "God";
         //Notifier les observers
+        setChanged();
+        notifyObservers();
+    }
+
+    public void setCreatorName(String creatorName)
+    {
+        this.creatorName = creatorName;
+        setChanged();
+        notifyObservers();
+    }
+
+    public void setProgrammerName(String programmerName)
+    {
+        this.programmerName = programmerName;
         setChanged();
         notifyObservers();
     }

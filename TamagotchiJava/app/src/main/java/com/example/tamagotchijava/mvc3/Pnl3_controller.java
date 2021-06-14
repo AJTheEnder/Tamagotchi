@@ -15,11 +15,11 @@ public class Pnl3_controller implements View.OnClickListener
     public void onClick(View v)
     {
         //Quand les boutons sont pressés changer d'écran
-        if(v.getId() == R.id.btnGotoPnl1)
+        if(v.getId() == R.id.pnl3_btnGoToPnl1)
         {
             refPnlManager.setPnl(1);
         }
-        if(v.getId() == R.id.pnl1_btnGotoPnl2)
+        if(v.getId() == R.id.pnl3_btnGoToPnl2)
         {
             refPnlManager.setPnl(2);
         }

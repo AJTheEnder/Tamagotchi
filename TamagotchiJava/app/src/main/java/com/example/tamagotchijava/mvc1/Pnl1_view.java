@@ -38,8 +38,10 @@ public class Pnl1_view extends LinearLayout
         btnGotoPnl3 = (Button)findViewById(R.id.pnl1_btnGotoPnl3);
     }
 
-    public void setRefCtrl(Pnl1_controller c) {
+    public void setRefCtrl(Pnl1_controller c)
+    {
         refCtrl = c;
         btnGotoPnl2.setOnClickListener(refCtrl);
+        btnGotoPnl3.setOnClickListener(refCtrl);
     }
 }
