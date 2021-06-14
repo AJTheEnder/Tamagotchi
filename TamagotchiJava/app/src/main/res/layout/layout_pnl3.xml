@@ -31,53 +31,58 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/ProgrammerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginRight="57dp"
-        android:text="Programmer Name"
-        app:layout_constraintEnd_toStartOf="@+id/textTamagotchiName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageOption" />
-
-    <TextView
         android:id="@+id/CreatorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginLeft="21dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
         android:text="Creator Name"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/textYourName"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ProgrammerName" />
 
-    <Button
-        android:id="@+id/btnReboot"
+    <TextView
+        android:id="@+id/ProgrammerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:text="Programmer Name"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/textTamagotchiName"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageOption" />
+
+    <Button
+        android:id="@+id/btnReboot"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
         android:layout_marginStart="89dp"
         android:layout_marginLeft="89dp"
         android:layout_marginEnd="88dp"
         android:layout_marginRight="88dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="4dp"
         android:text="Wipe"
         app:layout_constraintBottom_toTopOf="@+id/pnl3_btnGoToPnl1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/pnl3_btnGoToPnl1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginBottom="4dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,10 +90,10 @@
 
     <Button
         android:id="@+id/pnl3_btnGoToPnl2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -98,13 +103,13 @@
         android:id="@+id/textYourName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="God"
-        android:textSize="8sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTamagotchiName" />
 
@@ -112,13 +117,13 @@
         android:id="@+id/textTamagotchiName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Random"
-        android:textSize="8sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageOption" />
 </androidx.constraintlayout.widget.ConstraintLayout>
