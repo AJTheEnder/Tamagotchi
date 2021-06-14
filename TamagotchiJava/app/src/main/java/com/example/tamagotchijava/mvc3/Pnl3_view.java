@@ -1,6 +1,5 @@
 package com.example.tamagotchijava.mvc3;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tamagotchijava.R;
-import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -30,12 +28,12 @@ public class Pnl3_view extends LinearLayout implements Observer
     public ImageView image;
 
     //Le nom du programmeur et du créateur
-    public TextInputEditText textProgrammerName;
-    public TextInputEditText textYourName;
+    public TextView textProgrammerName;
+    public TextView textYourName;
     //Texte du menu
     public TextView textHome;
 
-    @SuppressLint("WrongViewCast")
+
     public Pnl3_view(Context context)
     {
         super(context);
@@ -52,8 +50,8 @@ public class Pnl3_view extends LinearLayout implements Observer
         //Liaison des différents éléments à ceux de l'xml
         image = findViewById(R.id.imageOption);
 
-        textProgrammerName = (TextInputEditText)findViewById(R.id.textTamagotchiName);
-        textYourName = (TextInputEditText)findViewById(R.id.textYourName);
+        textProgrammerName = findViewById(R.id.textTamagotchiName);
+        textYourName = findViewById(R.id.textYourName);
     }
 
     public void setRefCtrl(Pnl3_controller c) {

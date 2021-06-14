@@ -25,9 +25,11 @@ public class Pnl_manager
     private Pnl1_controller ctrl1;
     private Pnl1_view view1;
     private Pnl1_model mdl1;
+
     private Pnl2_controller ctrl2;
     private Pnl2_view view2;
     private Pnl2_model mdl2;
+
     private Pnl3_controller ctrl3;
     private Pnl3_view view3;
     private Pnl3_model mdl3;
@@ -43,17 +45,35 @@ public class Pnl_manager
         ctrl1 = new Pnl1_controller();
         view1 = new Pnl1_view(context);
         mdl1 = new Pnl1_model();
+
         ctrl2 = new Pnl2_controller();
         view2 = new Pnl2_view(context);
         mdl2 = new Pnl2_model();
+
         ctrl3 = new Pnl3_controller();
         view3 = new Pnl3_view(context);
         mdl3 = new Pnl3_model();
 
+        view1.refMdl = mdl1;
+        view1.refCtrl = ctrl1;
         view1.setRefCtrl(ctrl1);
-        ctrl1.refPnlManager = this;
+        ctrl1.refPnlManager= this;
+
+        view2.refMdl= mdl2;
+        ctrl2.refMdl= mdl2;
+        view2.setRefCtrl(ctrl2);
+        ctrl2.refPnlManager= this;
+
+        view3.refMdl= mdl3;
+        ctrl3.refMdl= mdl3;
+        view3.setRefCtrl(ctrl3);
+        ctrl3.refPnlManager= this;
 
         refAct = (Activity)context;
+
+        mdl1.addObserver(view1);
+        mdl2.addObserver(view2);
+        mdl3.addObserver(view3);
     }
 
     public static Pnl_manager getInstance(Context context)

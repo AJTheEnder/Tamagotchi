@@ -31,7 +31,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/textTamagotchiName"
+        android:id="@+id/ProgrammerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
@@ -39,13 +39,13 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        android:text="Programmer Name"
+        app:layout_constraintEnd_toStartOf="@+id/textTamagotchiName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageOption" />
 
     <TextView
-        android:id="@+id/textYourName"
+        android:id="@+id/CreatorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
@@ -53,10 +53,10 @@
         android:layout_marginTop="9dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        android:text="Creator Name"
+        app:layout_constraintEnd_toStartOf="@+id/textYourName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTamagotchiName" />
+        app:layout_constraintTop_toBottomOf="@+id/ProgrammerName" />
 
     <Button
         android:id="@+id/btnReboot"
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/textYourName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -103,13 +103,13 @@
         android:layout_marginRight="43dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="God"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/textTamagotchiName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/textTamagotchiName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -117,7 +117,7 @@
         android:layout_marginRight="43dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Random"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageOption" />

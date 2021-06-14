@@ -79,6 +79,6 @@ public class Pnl2_view extends LinearLayout implements Observer
         textMessage.setText(refMdl.getMessage());
         textEnergie.setText(Integer.toString(refMdl.getEnergiePoints()));
         textProductivite.setText(Integer.toString(refMdl.getProductivitePoints()));
-        imageProgrammer.setImageBitmap(refMdl.getImage());
+        //imageProgrammer.setImageBitmap(refMdl.getImage());
     }
 }

@@ -12,9 +12,13 @@ import com.example.tamagotchijava.R;
 
 import org.w3c.dom.Text;
 
-public class Pnl1_view extends LinearLayout
+import java.util.Observable;
+import java.util.Observer;
+
+public class Pnl1_view extends LinearLayout implements Observer
 {
     public Pnl1_controller refCtrl;
+    public Pnl1_model refMdl;
 
     //Les boutons pour aller aux écrans 1 et 2
     public Button btnGotoPnl2;
@@ -43,5 +47,11 @@ public class Pnl1_view extends LinearLayout
         refCtrl = c;
         btnGotoPnl2.setOnClickListener(refCtrl);
         btnGotoPnl3.setOnClickListener(refCtrl);
+    }
+
+    @Override
+    public void update(Observable o, Object arg)
+    {
+
     }
 }
