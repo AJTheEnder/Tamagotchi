@@ -15,7 +15,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="110dp"
         android:layout_marginRight="110dp"
-        android:text="TextView"
+        android:text="Paramètres"
+        android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,12 +24,13 @@
     <ImageView
         android:id="@+id/imageOption"
         android:layout_width="312dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="13dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:src="@drawable/coder_pbeg" />
 
     <TextView
         android:id="@+id/CreatorName"
@@ -36,26 +38,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginLeft="21dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
-        android:text="Creator Name"
+        android:text="Boss"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/textYourName"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ProgrammerName" />
 
     <TextView
         android:id="@+id/ProgrammerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="167dp"
+        android:layout_height="43dp"
         android:layout_marginStart="21dp"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="57dp"
         android:layout_marginRight="57dp"
-        android:text="Programmer Name"
+        android:text="Programmer"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/textTamagotchiName"
         app:layout_constraintHorizontal_bias="0.303"
@@ -72,6 +74,7 @@
         android:layout_marginRight="88dp"
         android:layout_marginBottom="4dp"
         android:text="Wipe"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/pnl3_btnGoToPnl1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -84,7 +87,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginBottom="4dp"
-        android:text="Button"
+        android:text="Page 1"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -95,7 +99,8 @@
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:text="Button"
+        android:text="Page 2"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -108,7 +113,6 @@
         android:layout_marginRight="4dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="God"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTamagotchiName" />
@@ -122,7 +126,6 @@
         android:layout_marginRight="4dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Random"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageOption" />
