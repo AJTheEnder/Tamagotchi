@@ -35,7 +35,7 @@ public class Pnl2_model extends Observable
         m_Handler.postDelayed(mToastRunnable, 2000);
     }
 
-    public void Energiser() throws InterruptedException {
+    public void Energiser() {
         //Soit monster pour energiser
         if(rand.nextBoolean() == true)
         {
@@ -65,11 +65,11 @@ public class Pnl2_model extends Observable
         //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
-        Thread.sleep(30000);
+        //Thread.sleep(30000);
         whatIsProgrammerState();
     }
 
-    public void Pause() throws InterruptedException {
+    public void Pause() {
         //Ajoute 10 à l'énergie
         if(EnergiePoints <= 90)
         {
@@ -81,7 +81,7 @@ public class Pnl2_model extends Observable
         //Enlève 10 à la productivité
         if(ProductivitePoints >= 10)
         {
-            EnergiePoints -= 10;
+            ProductivitePoints -= 10;
         }
         else {
             ProductivitePoints = 0;
@@ -91,21 +91,23 @@ public class Pnl2_model extends Observable
         //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
-        Thread.sleep(30000);
+        //Thread.sleep(30000);
         whatIsProgrammerState();
     }
 
-    public void Menace() throws InterruptedException {
+    public void Menace() {
+        //Ajoute 12 à la productivité
         if(ProductivitePoints <= 88)
         {
-            EnergiePoints += 12;
+            ProductivitePoints += 12;
         }
         else {
             ProductivitePoints = 100;
         }
+        //Enlève 12 à l'énergie
         if(EnergiePoints >= 12)
         {
-            EnergiePoints += 12;
+            EnergiePoints -= 12;
         }
         else {
             EnergiePoints = 0;
@@ -115,7 +117,7 @@ public class Pnl2_model extends Observable
         //Notifier les observers, atendre 3 secondes et afficher l'état du programmeur
         setChanged();
         notifyObservers();
-        Thread.sleep(30000);
+        //Thread.sleep(30000);
         whatIsProgrammerState();
     }
 
@@ -156,7 +158,7 @@ public class Pnl2_model extends Observable
         @Override
         public void run()
         {
-            if(ProductivitePoints != 0 && EnergiePoints == 0)
+            if(ProductivitePoints != 0 && EnergiePoints != 0)
             {
                 if(ProductivitePoints > 0)
                 {

@@ -26,27 +26,15 @@ public class Pnl2_controller implements View.OnClickListener
         //Quand les boutons sont pressés activer l'action choisie
         if(v.getId() == R.id.btnMenacer)
         {
-            try {
                 refMdl.Menace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         if(v.getId() == R.id.btnEnergiser)
         {
-            try {
                 refMdl.Energiser();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         if(v.getId() == R.id.btnPause)
         {
-            try {
                 refMdl.Pause();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
