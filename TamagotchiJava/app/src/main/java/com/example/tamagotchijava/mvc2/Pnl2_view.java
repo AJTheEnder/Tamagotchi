@@ -95,7 +95,7 @@ public class Pnl2_view extends LinearLayout implements Observer
                 imageProgrammer.setImageResource(R.drawable.coder_pbeb);
                 break;
             case 4:
-                imageProgrammer.setImageResource(R.drawable.coder_pnen);
+                imageProgrammer.setImageResource(R.drawable.coder_fiered);
                 btnMenacer.setEnabled(false);
                 btnEnergiser.setEnabled(false);
                 btnPause.setEnabled(false);

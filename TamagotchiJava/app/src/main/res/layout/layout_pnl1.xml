@@ -33,7 +33,7 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginBottom="4dp"
-        android:text="Aller à Ecran 2"
+        android:text="Gameplay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -42,7 +42,7 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginBottom="4dp"
-        android:text="Aller à écran 3"
+        android:text="Paramètres"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
